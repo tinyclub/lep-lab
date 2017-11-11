@@ -1,0 +1,6 @@
+[submodule "lepd"]
+	path = lepd
+	url = https://github.com/linuxep/lepd
+[submodule "lepv"]
+	path = lepv
+	url = https://github.com/linuxep/lepv
