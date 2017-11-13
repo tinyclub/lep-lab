@@ -23,6 +23,14 @@ if [ $LEPD_ARCH != 'x86' ]; then
   QEMU_USER=qemu-$LEPD_ARCH
 fi
 
+# perf
+echo "LOG: installing perf for `uname -r`"
+dpkg -l linux-tools-`uname -r` | grep -q ^ii
+if [ $? -ne 0 ]; then
+   number=`apt-cache search linux-tools-`uname -r` | wc -l`
+   [ $number -ne 0 ] && sudo apt-get install linux-tools-`uname -r`
+fi
+
 # lepd in local host
 echo "LOG: Killing lepd"
 pkill lepd
