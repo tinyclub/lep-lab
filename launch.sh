@@ -17,10 +17,12 @@ LEPV_PORT=${LEPV_PORT:-8889}
 
 LEPV_URL=http://$LEPV_IP:$LEPV_PORT
 
+LEPD=$LEPD_DIR/lepd
+
 WEB_BROWSER=chromium-browser
 
 if [ $LEPD_ARCH != 'x86' ]; then
-  QEMU_USER=qemu-$LEPD_ARCH
+  QEMU_USER=/usr/bin/qemu-$LEPD_ARCH
 fi
 
 # perf
@@ -33,18 +35,18 @@ fi
 
 # lepd in local host
 echo "LOG: Killing lepd"
-pkill lepd
+sudo pkill lepd
 
 echo "LOG: Compiling lepd"
 cd $LEPD_DIR && make ARCH=$LEPD_ARCH
 
 echo "LOG: Running lepd"
-cd $LEPD_DIR && $QEMU_USER ./lepd
+cd $LEPD_DIR && sudo $QEMU_USER $LEPD
 
 # lepv server
 
 echo "LOG: Killing lepv server"
-pkill python3
+sudo pkill python3
 
 echo "LOG: Change lepv server to localhost"
 sed -i -e 's/www.rmlink.cn/localhost/g' $LEPV_IDX
