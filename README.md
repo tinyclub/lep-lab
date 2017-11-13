@@ -97,6 +97,10 @@ After login, Open 'Lep Lab' in the desktop and it will enter into the working di
 
     $ chromium-browser http://localhost:8889
 
+### Analyze local lepd data
+
+Change the server to 'localhost' instead of the default 'www.rmlink.cn'
+
 ### Run everything in one command
 
 Open 'Lep Viewer' or run the following command in terminal
