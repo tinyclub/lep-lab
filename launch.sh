@@ -42,7 +42,7 @@ cd $LEPD_DIR && make clean
 cd $LEPD_DIR && make -j4 ARCH=$LEPD_ARCH
 
 echo "LOG: Running lepd"
-cd $LEPD_DIR && sudo $QEMU_USER $LEPD
+sync && cd $LEPD_DIR && sudo $QEMU_USER $LEPD
 
 # lepv server
 
