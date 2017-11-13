@@ -105,8 +105,8 @@ Change the server to 'localhost' instead of the default 'www.rmlink.cn'
 
 Open 'Lep Viewer' or run the following command in terminal
 
-    $ ./launch.sh
+    $ make view
 
 It kills the running lepd, lepv and restart a new one, to specify the architecture:
 
-    $ LEPD_ARCH=arm ./launch.sh
+    $ LEPD_ARCH=arm make view
