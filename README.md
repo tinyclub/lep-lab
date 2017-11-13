@@ -80,7 +80,7 @@ After login, Open 'Lep Lab' in the desktop and it will enter into the working di
 
 ### Update the source code
 
-    $ git submodule update --init --remote .
+    $ make init
 
 ### Compile and run lepd
 
