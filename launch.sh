@@ -49,8 +49,8 @@ sync && cd $LEPD_DIR && sudo $QEMU_USER $LEPD
 echo "LOG: Killing lepv server"
 sudo pkill python3
 
-echo "LOG: Change lepv server to localhost"
-sed -i -e 's/www.rmlink.cn/localhost/g' $LEPV_IDX
+#echo "LOG: Change lepv server to localhost"
+#sed -i -e 's/www.rmlink.cn/localhost/g' $LEPV_IDX
 
 echo "LOG: Running lepv server"
 cd $LEPV_APP/ && python3 ./run.py &
