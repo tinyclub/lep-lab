@@ -38,7 +38,8 @@ echo "LOG: Killing lepd"
 sudo pkill lepd
 
 echo "LOG: Compiling lepd"
-cd $LEPD_DIR && make ARCH=$LEPD_ARCH
+cd $LEPD_DIR && make clean
+cd $LEPD_DIR && make -j4 ARCH=$LEPD_ARCH
 
 echo "LOG: Running lepd"
 cd $LEPD_DIR && sudo $QEMU_USER $LEPD
