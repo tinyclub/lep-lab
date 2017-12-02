@@ -1,18 +1,20 @@
 
-# Lep Lab
+# LEP Lab
 
 LEP is an open-sourced all-in-one toolbox for Linux/Android performance profiling & visualization.
 
-* [Homepage](http://www.linuxep.com/)
-* [Github](https://github.com/linuxep/)
+* [LEP Homepage](http://www.linuxep.com/)
+* [LEP Git Repo](https://github.com/linuxep/)
 
 To easier the learning and development of the LEP itself, this lab is added as a plugin of [Cloud Lab](http://tinylab.org/cloud-lab).
 
 The following sections introduce the using of LEP with Cloud Lab.
 
+* [LEP Lab Homepage](http://tinylab.org/lep-lab)
+
 ## Install Docker
 
-Docker is required by Lep Lab, please install it at first:
+Docker is required by LEP Lab, please install it at first:
 
 * Linux and Mac OSX: [Docker CE](https://store.docker.com/search?type=edition&offering=community)
 * Windows: [Docker Toolbox](https://www.docker.com/docker-toolbox)
@@ -76,7 +78,7 @@ Re-login the lab via web browser:
 
 ## Use the lab
 
-After login, Open 'Lep Lab' in the desktop and it will enter into the working directory: `/labs/lep-lab/`,
+After login, Open 'LEP Lab' in the desktop and it will enter into the working directory: `/labs/lep-lab/`,
 
 ### Update the source code
 
